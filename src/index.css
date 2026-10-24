@@ -1,0 +1,188 @@
+body {
+  background: #f7f9fc;
+}
+
+.buddy-circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-section {
+  background: linear-gradient(180deg, #eaf3ff 0%, #f7f9fc 100%);
+  padding: 72px 0 56px;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #cfe2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.profile-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dee2e6;
+  border-radius: 999px;
+  padding: 4px 12px 4px 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.profile-chip-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff3cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.key-point-card {
+  border: none;
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+}
+
+.key-point-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.dashboard-stat-card {
+  border: none;
+  border-radius: 16px;
+  padding: 18px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Floating modal (vitals check + history + login) */
+.floating-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1050;
+}
+
+.floating-window {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.symptom-chip,
+.mood-chip,
+.avatar-pick {
+  cursor: pointer;
+  text-align: left;
+}
+
+.symptom-chip.active {
+  border-color: #0d6efd !important;
+  background: #e7f1ff;
+}
+
+.mood-chip.active {
+  border-color: #fd7e14 !important;
+  background: #fff3e6;
+}
+
+.avatar-pick.active {
+  border-color: #0d6efd !important;
+  background: #e7f1ff;
+}
+
+.avatar-pick {
+  font-size: 1.4rem;
+  width: 48px;
+  height: 48px;
+}
+
+/* Floating chatbot */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.35);
+  z-index: 1060;
+}
+
+.chat-panel {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  height: 460px;
+  max-height: calc(100vh - 140px);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1060;
+}
+
+.chat-bubble {
+  max-width: 82%;
+}
+
+@media (max-width: 480px) {
+  .chat-panel {
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+  .chat-toggle-btn {
+    right: 16px;
+  }
+}
+
+/* Health Vault */
+.vault-window {
+  max-width: 560px;
+}
+
+.pip-toast {
+  position: fixed;
+  top: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1080;
+  max-width: calc(100vw - 32px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
